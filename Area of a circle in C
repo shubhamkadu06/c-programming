@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+// Define the value of PI as a constant macro
+#define PI 3.14159
+
+int main() {
+    float radius, area;
+
+    // 1. Ask the user for the radius input
+    printf("Enter the radius of the circle: ");
+    scanf("%f", &radius);
+
+    // 2. Check for valid input (radius cannot be negative)
+    if (radius < 0) {
+        printf("Error: Radius cannot be a negative value.\n");
+    } else {
+        // 3. Calculate the area using the formula Area = PI * r * r
+        area = PI * radius * radius;
+
+        // 4. Display the result, limited to 2 decimal places
+        printf("The area of the circle is: %.2f\n", area);
+    }
+
+    return 0;
+}
