@@ -1,0 +1,77 @@
+#include <stdio.h>
+#include <math.h> // Required for advanced math functions like pow()
+
+int main() {
+    int choice;
+    
+    printf("=== Multi-Formula Calculator ===\n");
+    printf("1. Area of a Circle (pi * r^2)\n");
+    printf("2. Simple Interest (P * R * T / 100)\n");
+    printf("3. Celsius to Fahrenheit ((C * 9/5) + 32)\n");
+    printf("4. Area of a Rectangle (Length * Width)\n");
+    printf("5. Compound Interest (P * (1 + R/100)^T - P)\n");
+    printf("Enter your choice (1-5): ");
+    scanf("%d", &choice);
+
+    switch(choice) {
+        case 1: {
+            // Formula: Area = pi * r * r
+            float radius, area;
+            printf("\nEnter radius of the circle: ");
+            scanf("%f", &radius);
+            area = 3.14159 * radius * radius;
+            printf("Area of the Circle = %.2f\n", area);
+            break;
+        }
+        case 2: {
+            // Formula: SI = (P * R * T) / 100
+            float principal, rate, time, si;
+            printf("\nEnter Principal amount: ");
+            scanf("%f", &principal);
+            printf("Enter Rate of interest: ");
+            scanf("%f", &rate);
+            printf("Enter Time (in years): ");
+            scanf("%f", &time);
+            si = (principal * rate * time) / 100;
+            printf("Simple Interest = %.2f\n", si);
+            break;
+        }
+        case 3: {
+            // Formula: F = (C * 9/5) + 32
+            float celsius, fahrenheit;
+            printf("\nEnter temperature in Celsius: ");
+            scanf("%f", &celsius);
+            fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+            printf("Temperature in Fahrenheit = %.2f\n", fahrenheit);
+            break;
+        }
+        case 4: {
+            // Formula: Area = length * width
+            float length, width, area;
+            printf("\nEnter length of the rectangle: ");
+            scanf("%f", &length);
+            printf("Enter width of the rectangle: ");
+            scanf("%f", &width);
+            area = length * width;
+            printf("Area of the Rectangle = %.2f\n", area);
+            break;
+        }
+        case 5: {
+            // Formula: CI = P * (1 + R/100)^T - P
+            float principal, rate, time, ci;
+            printf("\nEnter Principal amount: ");
+            scanf("%f", &principal);
+            printf("Enter Rate of interest: ");
+            scanf("%f", &rate);
+            printf("Enter Time (in years): ");
+            scanf("%f", &time);
+            ci = principal * pow((1 + rate / 100.0), time) - principal;
+            printf("Compound Interest = %.2f\n", ci);
+            break;
+        }
+        default:
+            printf("\nInvalid selection! Please choose a number between 1 and 5.\n");
+    }
+
+    return 0;
+}
