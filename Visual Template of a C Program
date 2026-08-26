@@ -1,0 +1,33 @@
+/* 1. DOCUMENTATION SECTION
+   Author: Shubham Kadu 
+   Description: A program to calculate the area of a circle. */
+
+// 2. LINK / PREPROCESSOR SECTION
+#include <stdio.h> 
+
+// 3. DEFINITION SECTION
+#define PI 3.14159 
+
+// 4. GLOBAL DECLARATION SECTION
+int total_calculations = 0; 
+float calculate_area(float radius); 
+
+// 5. MAIN FUNCTION SECTION
+int main() {
+    // Local variable declarations
+    float r = 5.0;
+    float area;
+
+    // Executable statements
+    area = calculate_area(r);
+    printf("The area is: %f\n", area);
+
+    // Return statement
+    return 0; 
+}
+
+// 6. SUBPROGRAM / USER-DEFINED FUNCTIONS SECTION
+float calculate_area(float radius) {
+    total_calculations++;
+    return PI * radius * radius;
+}
