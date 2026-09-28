@@ -1,0 +1,8 @@
+#include <stdio.h>
+ 
+int main() {
+    printf( "Hello GfG\n");
+    printf( "Hello GfG\n");
+    printf( "Hello GfG");
+    return 0;
+}
