@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 10;
+    int temp;
+
+    // Swapping logic
+    temp = a;   // temp holds 5
+    a = b;      // a becomes 10
+    b = temp;   // b becomes 5
+
+    printf("After swap: a = %d, b = %d\n", a, b);
+    return 0;
+}
